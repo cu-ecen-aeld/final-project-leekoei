@@ -1,0 +1,361 @@
+starting test with SKIP_BUILD="" and DO_VALIDATE=""
+Running test with user ronli
+Executing assignment test script
+starting test with SKIP_BUILD  and DO_VALIDATE 
+~/Documents/coursera-linux-system/assignment-5-leekoei ~/Documents/coursera-linux-system/assignment-5-leekoei/assignment-autotest/test/assignment9-buildroot
+Private key is not set, attempts to clone may fail
+Or CI environment may have setup SSH authentication already...
+Running as:
+ronli
+Added known host github.com:
+Running build.sh for the first time
+Synchronizing submodule url for 'assignment-autotest'
+Synchronizing submodule url for 'buildroot'
+MISSING BUILDROOT CONFIGURATION FILE
+USING base_external/configs/aesd_qemu_defconfig
+make: Entering directory '/home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot'
+#
+# configuration written to /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/.config
+#
+make: Leaving directory '/home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot'
+Running build.sh for the second time as user:
+ronli
+Synchronizing submodule url for 'assignment-autotest'
+Synchronizing submodule url for 'buildroot'
+USING EXISTING BUILDROOT CONFIG
+To force update, delete .config or make changes using make menuconfig and build again.
+make: Entering directory '/home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot'
+/usr/bin/make -j1  O=/home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output HOSTCC="/usr/bin/gcc" HOSTCXX="/usr/bin/g++" syncconfig
+[7m>>>   Finalizing host directory[27m
+[7m>>>   Finalizing target directory[27m
+mkdir -p /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/host/etc/meson
+sed -e "s%@TARGET_CFLAGS@%'-D_LARGEFILE_SOURCE', '-D_LARGEFILE64_SOURCE', '-D_FILE_OFFSET_BITS=64', '-O2', '-g0', '-D_FORTIFY_SOURCE=1'@PKG_TARGET_CFLAGS@%g" -e "s%@TARGET_LDFLAGS@%@PKG_TARGET_LDFLAGS@%g" -e "s%@TARGET_CXXFLAGS@%'-D_LARGEFILE_SOURCE', '-D_LARGEFILE64_SOURCE', '-D_FILE_OFFSET_BITS=64', '-O2', '-g0', '-D_FORTIFY_SOURCE=1'@PKG_TARGET_CXXFLAGS@%g" -e "s%@TARGET_FCFLAGS@%'-O2', '-g0'@PKG_TARGET_FCFLAGS@%g"         -e "s%@TARGET_CC@%/home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/host/bin/aarch64-buildroot-linux-gnu-gcc%g" -e "s%@TARGET_CXX@%/bin/false%g" -e "s%@TARGET_AR@%/home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/host/bin/aarch64-buildroot-linux-gnu-gcc-ar%g" -e "s%@TARGET_FC@%/bin/false%g" -e "s%@TARGET_STRIP@%/home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/host/bin/aarch64-buildroot-linux-gnu-strip%g" -e "s%@TARGET_ARCH@%aarch64%g" -e "s%@TARGET_CPU@%cortex-a53%g" -e "s%@TARGET_ENDIAN@%little%g" -e "s%@TARGET_FCFLAGS@%%g" -e "s%@TARGET_CFLAGS@%%g" -e "s%@TARGET_LDFLAGS@%%g" -e "s%@TARGET_CXXFLAGS@%%g" -e "s%@BR2_CMAKE@%/usr/bin/cmake%g" -e "s%@PKGCONF_HOST_BINARY@%/home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/host/bin/pkgconf%g" -e "s%@HOST_DIR@%/home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/host%g" -e "s%@STAGING_DIR@%/home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/host/aarch64-buildroot-linux-gnu/sysroot%g" -e "s%@STATIC@%false%g" /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/support/misc/cross-compilation.conf.in > /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/host/etc/meson/cross-compilation.conf.in
+sed         -e "s%@TARGET_CC@%/home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/host/bin/aarch64-buildroot-linux-gnu-gcc%g" -e "s%@TARGET_CXX@%/bin/false%g" -e "s%@TARGET_AR@%/home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/host/bin/aarch64-buildroot-linux-gnu-gcc-ar%g" -e "s%@TARGET_FC@%/bin/false%g" -e "s%@TARGET_STRIP@%/home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/host/bin/aarch64-buildroot-linux-gnu-strip%g" -e "s%@TARGET_ARCH@%aarch64%g" -e "s%@TARGET_CPU@%cortex-a53%g" -e "s%@TARGET_ENDIAN@%little%g" -e "s%@TARGET_FCFLAGS@%'-O2', '-g0'%g" -e "s%@TARGET_CFLAGS@%'-D_LARGEFILE_SOURCE', '-D_LARGEFILE64_SOURCE', '-D_FILE_OFFSET_BITS=64', '-O2', '-g0', '-D_FORTIFY_SOURCE=1'%g" -e "s%@TARGET_LDFLAGS@%%g" -e "s%@TARGET_CXXFLAGS@%'-D_LARGEFILE_SOURCE', '-D_LARGEFILE64_SOURCE', '-D_FILE_OFFSET_BITS=64', '-O2', '-g0', '-D_FORTIFY_SOURCE=1'%g" -e "s%@BR2_CMAKE@%/usr/bin/cmake%g" -e "s%@PKGCONF_HOST_BINARY@%/home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/host/bin/pkgconf%g" -e "s%@HOST_DIR@%/home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/host%g" -e "s%@STAGING_DIR@%/home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/host/aarch64-buildroot-linux-gnu/sysroot%g" -e "s%@STATIC@%false%g" /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/support/misc/cross-compilation.conf.in > /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/host/etc/meson/cross-compilation.conf
+/usr/bin/sed -i -e '/# GENERIC_SERIAL$/s~^.*#~console::respawn:/sbin/getty -L  console 0 vt100 #~' /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/target/etc/inittab
+/usr/bin/sed -i -e '/^#.*-o remount,rw \/$/s~^#\+~~' /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/target/etc/inittab
+if grep -q CONFIG_ASH=y /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/build/busybox-1.37.0/.config; then grep -qsE '^/bin/ash$' /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/target/etc/shells || echo "/bin/ash" >> /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/target/etc/shells; fi
+if grep -q CONFIG_HUSH=y /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/build/busybox-1.37.0/.config; then grep -qsE '^/bin/hush$' /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/target/etc/shells || echo "/bin/hush" >> /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/target/etc/shells; fi
+mkdir -p /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/target/etc
+echo "buildroot" > /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/target/etc/hostname
+/usr/bin/sed -i -e '$a \127.0.1.1\tbuildroot' -e '/^127.0.1.1/d' /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/target/etc/hosts
+mkdir -p /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/target/etc
+echo "Welcome to Buildroot" > /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/target/etc/issue
+/usr/bin/sed -i -e s,^root:[^:]*:,root:"`/home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/host/bin/mkpasswd -m "sha-256" "root"`":, /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/target/etc/shadow
+grep -qsE '^/bin/sh$' /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/target/etc/shells || echo "/bin/sh" >> /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/target/etc/shells
+if [ -x /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/target/sbin/swapon -a -x /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/target/sbin/swapoff ]; then /usr/bin/sed -i -e '/^#.*\/sbin\/swap/s/^#\+[[:blank:]]*//' /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/target/etc/inittab; else /usr/bin/sed -i -e '/^[^#].*\/sbin\/swap/s/^/#/' /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/target/etc/inittab; fi
+if test -d /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/target/lib/modules/`MAKEFLAGS='--no-print-directory' /usr/bin/make -j5 HOSTCC="/home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/host/bin/ccache /usr/bin/gcc -O2 -isystem /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/host/include -L/home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/host/lib -Wl,-rpath,/home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/host/lib" ARCH=arm64 KCFLAGS="-Wno-attribute-alias" INSTALL_MOD_PATH=/home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/target CROSS_COMPILE="/home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/host/bin/aarch64-buildroot-linux-gnu-" WERROR=0 REGENERATE_PARSERS=1 DEPMOD=/home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/host/sbin/depmod INSTALL_MOD_STRIP=1 -C /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/build/linux-6.12.27 --no-print-directory -s kernelrelease 2>/dev/null` && grep -q "CONFIG_MODULES=y" /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/build/linux-6.12.27/.config; then /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/host/sbin/depmod -a -b /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/target `MAKEFLAGS='--no-print-directory' /usr/bin/make -j5 HOSTCC="/home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/host/bin/ccache /usr/bin/gcc -O2 -isystem /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/host/include -L/home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/host/lib -Wl,-rpath,/home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/host/lib" ARCH=arm64 KCFLAGS="-Wno-attribute-alias" INSTALL_MOD_PATH=/home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/target CROSS_COMPILE="/home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/host/bin/aarch64-buildroot-linux-gnu-" WERROR=0 REGENERATE_PARSERS=1 DEPMOD=/home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/host/sbin/depmod INSTALL_MOD_STRIP=1 -C /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/build/linux-6.12.27 --no-print-directory -s kernelrelease 2>/dev/null`; fi
+printf '%s\n' C en_US locale-archive > /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/build/locales.nopurge
+for dir in /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/target/usr/share/locale /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/target/usr/share/X11/locale /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/target/usr/lib/locale; do if [ ! -d $dir ]; then continue; fi; for langdir in $dir/*; do if [ -e "${langdir}" ]; then grep -qx "${langdir##*/}" /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/build/locales.nopurge || rm -rf $langdir; fi done; done
+if [ -d /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/target/usr/share/X11/locale ]; then for lang in C en_US; do if [ -f /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/target/usr/share/X11/locale/$lang/XLC_LOCALE ]; then echo "$lang/XLC_LOCALE: $lang"; fi done > /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/target/usr/share/X11/locale/locale.dir; fi
+rm -rf /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/target/usr/include /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/target/usr/share/aclocal \
+	/home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/target/usr/lib/pkgconfig /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/target/usr/share/pkgconfig \
+	/home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/target/usr/lib/cmake /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/target/usr/share/cmake \
+	/home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/target/usr/lib/rpm /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/target/usr/doc
+find /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/target/usr/{lib,share}/ -name '*.cmake' -print0 | xargs -0 rm -f
+find /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/target/lib/ /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/target/usr/lib/ /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/target/usr/libexec/ \
+	\( -name '*.a' -o -name '*.la' -o -name '*.prl' \) -print0 | xargs -0 rm -f
+rm -rf /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/target/usr/share/gdb
+rm -rf /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/target/usr/share/bash-completion
+rm -rf /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/target/etc/bash_completion.d
+rm -rf /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/target/usr/share/zsh
+rm -rf /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/target/usr/man /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/target/usr/share/man
+rm -rf /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/target/usr/info /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/target/usr/share/info
+rm -rf /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/target/usr/doc /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/target/usr/share/doc
+rm -rf /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/target/usr/share/gtk-doc
+rmdir /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/target/usr/share 2>/dev/null || true
+rm -rf /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/target/lib/debug /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/target/usr/lib/debug
+find /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/target   -type f \( -perm /111 -o -name '*.so*' \) -not \( -name 'libpthread*.so*' -o -name 'ld-*.so*' -o -name '*.ko' \) -print0 | xargs -0 /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/host/bin/aarch64-buildroot-linux-gnu-strip --remove-section=.comment --remove-section=.note 2>/dev/null || true
+find /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/target   \( -name 'ld-*.so*' -o -name 'libpthread*.so*' \) -print0 | xargs -0 -r /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/host/bin/aarch64-buildroot-linux-gnu-strip --remove-section=.comment --remove-section=.note --strip-debug 2>/dev/null || true
+test -f /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/target/etc/ld.so.conf && \
+	{ echo "ERROR: we shouldn't have a /etc/ld.so.conf file"; exit 1; } || true
+test -d /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/target/etc/ld.so.conf.d && \
+	{ echo "ERROR: we shouldn't have a /etc/ld.so.conf.d directory"; exit 1; } || true
+mkdir -p /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/target/etc
+( \
+	echo "NAME=Buildroot"; \
+	echo "VERSION=2025.02.8-46-g9a5dca399f"; \
+	echo "ID=buildroot"; \
+	echo "VERSION_ID=2025.02.8"; \
+	echo "PRETTY_NAME=\"Buildroot 2025.02.8\"" \
+) >  /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/target/usr/lib/os-release
+ln -sf ../usr/lib/os-release /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/target/etc
+[7m>>>   Sanitizing RPATH in target tree[27m
+PARALLEL_JOBS=5 \
+	PER_PACKAGE_DIR=/home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/per-package \
+	/home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/support/scripts/fix-rpath target
+[7m>>>   Copying overlay ../base_external/rootfs_overlay[27m
+touch /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/target/usr
+[7m>>>   Generating root filesystems common tables[27m
+rm -rf /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/build/buildroot-fs
+mkdir -p /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/build/buildroot-fs
+printf '   \n' >> /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/build/buildroot-fs/full_users_table.txt
+printf '   	/bin/busybox                     f 4755 0  0 - - - - -\n\n' > /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/build/buildroot-fs/full_devices_table.txt
+cat system/device_table.txt >> /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/build/buildroot-fs/full_devices_table.txt
+[7m>>>   Generating filesystem image rootfs.ext2[27m
+mkdir -p /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/images
+rm -rf /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/build/buildroot-fs/ext2
+mkdir -p /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/build/buildroot-fs/ext2
+rsync -auH --exclude=/THIS_IS_NOT_YOUR_ROOT_FILESYSTEM /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/target/ /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/build/buildroot-fs/ext2/target
+echo '#!/bin/sh' > /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/build/buildroot-fs/ext2/fakeroot
+echo "set -e" >> /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/build/buildroot-fs/ext2/fakeroot
+echo "chown -h -R 0:0 /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/build/buildroot-fs/ext2/target" >> /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/build/buildroot-fs/ext2/fakeroot
+PATH="/home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/host/bin:/home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/host/sbin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/ronli/Documents/arm-gnu-toolchain-13.3.rel1-x86_64-aarch64-none-linux-gnu/bin" /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/support/scripts/mkusers /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/build/buildroot-fs/full_users_table.txt /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/build/buildroot-fs/ext2/target >> /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/build/buildroot-fs/ext2/fakeroot
+echo "/home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/host/bin/makedevs -d /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/build/buildroot-fs/full_devices_table.txt /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/build/buildroot-fs/ext2/target" >> /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/build/buildroot-fs/ext2/fakeroot
+printf '   	rm -rf /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/build/buildroot-fs/ext2/target/usr/lib/udev/hwdb.d/ /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/build/buildroot-fs/ext2/target/etc/udev/hwdb.d/\n' >> /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/build/buildroot-fs/ext2/fakeroot
+echo "find /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/build/buildroot-fs/ext2/target/run/ -mindepth 1 -prune -print0 | xargs -0r rm -rf --" >> /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/build/buildroot-fs/ext2/fakeroot
+echo "find /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/build/buildroot-fs/ext2/target/tmp/ -mindepth 1 -prune -print0 | xargs -0r rm -rf --" >> /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/build/buildroot-fs/ext2/fakeroot
+printf '   \n' >> /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/build/buildroot-fs/ext2/fakeroot
+printf '   \n' >> /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/build/buildroot-fs/ext2/fakeroot
+printf '   	rm -f /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/images/rootfs.ext2\n	/home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/host/sbin/mkfs.ext4 -d /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/build/buildroot-fs/ext2/target -N 0 -m 5 -L "rootfs" -I 256 -O ^64bit /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/images/rootfs.ext2 "60M" || { ret=$?; echo "*** Maybe you need to increase the filesystem size (BR2_TARGET_ROOTFS_EXT2_SIZE)" 1>&2; exit $ret; }\n' >> /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/build/buildroot-fs/ext2/fakeroot
+chmod a+x /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/build/buildroot-fs/ext2/fakeroot
+PATH="/home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/host/bin:/home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/host/sbin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/ronli/Documents/arm-gnu-toolchain-13.3.rel1-x86_64-aarch64-none-linux-gnu/bin" FAKEROOTDONTTRYCHOWN=1 /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/host/bin/fakeroot -- /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/build/buildroot-fs/ext2/fakeroot
+rootdir=/home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/build/buildroot-fs/ext2/target
+table='/home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/build/buildroot-fs/full_devices_table.txt'
+Creating regular file /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/images/rootfs.ext2
+64-bit filesystem support is not enabled.  The larger fields afforded by this feature enable full-strength checksumming.  Pass -O 64bit to rectify.
+Creating filesystem with 61440 1k blocks and 15360 inodes
+Filesystem UUID: 6871b0da-a460-448e-84b3-d8eb4d55466a
+Superblock backups stored on blocks: 
+	8193, 24577, 40961, 57345
+
+Allocating group tables: 0/8   done                            
+Writing inode tables: 0/8   done                            
+Creating journal (4096 blocks): done
+Copying files into the device: done
+Writing superblocks and filesystem accounting information: 0/8   done
+
+ln -sf rootfs.ext2 /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot/output/images/rootfs.ext4
+[7m>>>   Executing post-image script board/qemu/post-image.sh[27m
+make: Leaving directory '/home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/buildroot'
+Build returned 0
+build step complete with status 0
+Validation errors 
+~/Documents/coursera-linux-system/assignment-5-leekoei/assignment-autotest/test/assignment9-buildroot
+Starting validation step
+~/Documents/coursera-linux-system/assignment-5-leekoei ~/Documents/coursera-linux-system/assignment-5-leekoei/assignment-autotest/test/assignment9-buildroot
+Executing runqemu.sh in background
+# Host [localhost]:10022 found: line 188
+/home/ronli/.ssh/known_hosts updated.
+Original contents retained as /home/ronli/.ssh/known_hosts.old
+Waiting for qemu to startup
+Booting Linux on physical CPU 0x0000000000 [0x410fd034]
+Linux version 6.12.27 (ronli@Ubuntu) (aarch64-buildroot-linux-gnu-gcc.br_real (Buildroot 2025.02.8-46-g9a5dca399f) 13.4.0, GNU ld (GNU Binutils) 2.43.1) #1 SMP Wed Feb 25 16:56:10 EST 2026
+Machine model: linux,dummy-virt
+efi: UEFI not found.
+OF: reserved mem: Reserved memory: No reserved-memory node in the DT
+Zone ranges:
+  DMA      [mem 0x0000000040000000-0x0000000047ffffff]
+  DMA32    empty
+  Normal   empty
+Movable zone start for each node
+Early memory node ranges
+  node   0: [mem 0x0000000040000000-0x0000000047ffffff]
+Initmem setup node 0 [mem 0x0000000040000000-0x0000000047ffffff]
+psci: probing for conduit method from DT.
+psci: PSCIv0.2 detected in firmware.
+psci: Using standard PSCI v0.2 function IDs
+psci: Trusted OS migration not required
+percpu: Embedded 20 pages/cpu s44248 r8192 d29480 u81920
+Detected VIPT I-cache on CPU0
+CPU features: detected: ARM erratum 843419
+CPU features: detected: ARM erratum 845719
+alternatives: applying boot alternatives
+Kernel command line: rootwait root=/dev/vda console=ttyAMA0
+Dentry cache hash table entries: 16384 (order: 5, 131072 bytes, linear)
+Inode-cache hash table entries: 8192 (order: 4, 65536 bytes, linear)
+Built 1 zonelists, mobility grouping on.  Total pages: 32768
+mem auto-init: stack:all(zero), heap alloc:off, heap free:off
+software IO TLB: SWIOTLB bounce buffer size adjusted to 0MB
+software IO TLB: area num 1.
+software IO TLB: mapped [mem 0x0000000047f1c000-0x0000000047f5c000] (0MB)
+SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+rcu: Hierarchical RCU implementation.
+rcu: 	RCU restricting CPUs from NR_CPUS=512 to nr_cpu_ids=1.
+rcu: RCU calculated value of scheduler-enlistment delay is 25 jiffies.
+rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=1
+NR_IRQS: 64, nr_irqs: 64, preallocated irqs: 0
+Root IRQ handler: gic_handle_irq
+GICv2m: range[mem 0x08020000-0x08020fff], SPI[80:143]
+rcu: srcu_init: Setting srcu_struct sizes based on contention.
+arch_timer: cp15 timer(s) running at 62.50MHz (virt).
+clocksource: arch_sys_counter: mask: 0x1ffffffffffffff max_cycles: 0x1cd42e208c, max_idle_ns: 881590405314 ns
+sched_clock: 57 bits at 63MHz, resolution 16ns, wraps every 4398046511096ns
+Console: colour dummy device 80x25
+Calibrating delay loop (skipped), value calculated using timer frequency.. 125.00 BogoMIPS (lpj=250000)
+pid_max: default: 32768 minimum: 301
+Mount-cache hash table entries: 512 (order: 0, 4096 bytes, linear)
+Mountpoint-cache hash table entries: 512 (order: 0, 4096 bytes, linear)
+cacheinfo: Unable to detect cache hierarchy for CPU 0
+rcu: Hierarchical SRCU implementation.
+rcu: 	Max phase no-delay instances is 1000.
+EFI services will not be available.
+smp: Bringing up secondary CPUs ...
+smp: Brought up 1 node, 1 CPU
+SMP: Total of 1 processors activated.
+CPU: All CPU(s) started at EL1
+CPU features: detected: 32-bit EL0 Support
+CPU features: detected: CRC32 instructions
+alternatives: applying system-wide alternatives
+Memory: 113396K/131072K available (8000K kernel code, 882K rwdata, 1960K rodata, 1152K init, 576K bss, 16716K reserved, 0K cma-reserved)
+devtmpfs: initialized
+clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645041785100000 ns
+futex hash table entries: 256 (order: 2, 16384 bytes, linear)
+29568 pages in range for non-PLT usage
+521088 pages in range for PLT usage
+DMI not present or invalid.
+NET: Registered PF_NETLINK/PF_ROUTE protocol family
+DMA: preallocated 128 KiB GFP_KERNEL pool for atomic allocations
+DMA: preallocated 128 KiB GFP_KERNEL|GFP_DMA pool for atomic allocations
+DMA: preallocated 128 KiB GFP_KERNEL|GFP_DMA32 pool for atomic allocations
+thermal_sys: Registered thermal governor 'step_wise'
+cpuidle: using governor menu
+hw-breakpoint: found 6 breakpoint and 4 watchpoint registers.
+ASID allocator initialised with 65536 entries
+Serial: AMBA PL011 UART driver
+9000000.pl011: ttyAMA0 at MMIO 0x9000000 (irq = 13, base_baud = 0) is a PL011 rev1
+printk: legacy console [ttyAMA0] enabled
+ACPI: Interpreter disabled.
+iommu: Default domain type: Translated
+iommu: DMA domain TLB invalidation policy: strict mode
+SCSI subsystem initialized
+pps_core: LinuxPPS API ver. 1 registered
+pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+PTP clock support registered
+vgaarb: loaded
+clocksource: Switched to clocksource arch_sys_counter
+pnp: PnP ACPI: disabled
+NET: Registered PF_INET protocol family
+IP idents hash table entries: 2048 (order: 2, 16384 bytes, linear)
+tcp_listen_portaddr_hash hash table entries: 256 (order: 0, 4096 bytes, linear)
+Table-perturb hash table entries: 65536 (order: 6, 262144 bytes, linear)
+TCP established hash table entries: 1024 (order: 1, 8192 bytes, linear)
+TCP bind hash table entries: 1024 (order: 3, 32768 bytes, linear)
+TCP: Hash tables configured (established 1024 bind 1024)
+UDP hash table entries: 256 (order: 1, 8192 bytes, linear)
+UDP-Lite hash table entries: 256 (order: 1, 8192 bytes, linear)
+NET: Registered PF_UNIX/PF_LOCAL protocol family
+PCI: CLS 0 bytes, default 64
+workingset: timestamp_bits=46 max_order=15 bucket_order=0
+fuse: init (API version 7.41)
+Block layer SCSI generic (bsg) driver version 0.4 loaded (major 249)
+io scheduler mq-deadline registered
+io scheduler kyber registered
+pci-host-generic 4010000000.pcie: host bridge /pcie@10000000 ranges:
+pci-host-generic 4010000000.pcie:       IO 0x003eff0000..0x003effffff -> 0x0000000000
+pci-host-generic 4010000000.pcie:      MEM 0x0010000000..0x003efeffff -> 0x0010000000
+pci-host-generic 4010000000.pcie:      MEM 0x8000000000..0xffffffffff -> 0x8000000000
+pci-host-generic 4010000000.pcie: Memory resource size exceeds max for 32 bits
+pci-host-generic 4010000000.pcie: ECAM at [mem 0x4010000000-0x401fffffff] for [bus 00-ff]
+pci-host-generic 4010000000.pcie: PCI host bridge to bus 0000:00
+pci_bus 0000:00: root bus resource [bus 00-ff]
+pci_bus 0000:00: root bus resource [io  0x0000-0xffff]
+pci_bus 0000:00: root bus resource [mem 0x10000000-0x3efeffff]
+pci_bus 0000:00: root bus resource [mem 0x8000000000-0xffffffffff]
+pci 0000:00:00.0: [1b36:0008] type 00 class 0x060000 conventional PCI endpoint
+pci 0000:00:01.0: [1af4:1005] type 00 class 0x00ff00 conventional PCI endpoint
+pci 0000:00:01.0: BAR 0 [io  0x0000-0x001f]
+pci 0000:00:01.0: BAR 4 [mem 0x00000000-0x00003fff 64bit pref]
+pci 0000:00:01.0: BAR 4 [mem 0x8000000000-0x8000003fff 64bit pref]: assigned
+pci 0000:00:01.0: BAR 0 [io  0x1000-0x101f]: assigned
+pci_bus 0000:00: resource 4 [io  0x0000-0xffff]
+pci_bus 0000:00: resource 5 [mem 0x10000000-0x3efeffff]
+pci_bus 0000:00: resource 6 [mem 0x8000000000-0xffffffffff]
+virtio-pci 0000:00:01.0: enabling device (0000 -> 0003)
+random: crng init done
+virtio_blk virtio0: 1/0/0 default/read/poll queues
+virtio_blk virtio0: [vda] 122880 512-byte logical blocks (62.9 MB/60.0 MiB)
+rtc-pl031 9010000.pl031: registered as rtc0
+rtc-pl031 9010000.pl031: setting system clock to 2026-03-07T15:28:30 UTC (1772897310)
+hw perfevents: enabled with armv8_pmuv3 PMU driver, 5 (0,8000000f) counters available
+NET: Registered PF_INET6 protocol family
+Segment Routing with IPv6
+In-situ OAM (IOAM) with IPv6
+sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+NET: Registered PF_PACKET protocol family
+NET: Registered PF_KEY protocol family
+NET: Registered PF_VSOCK protocol family
+registered taskstats version 1
+clk: Disabling unused clocks
+PM: genpd: Disabling unused power domains
+EXT4-fs (vda): orphan cleanup on readonly fs
+EXT4-fs (vda): mounted filesystem 6871b0da-a460-448e-84b3-d8eb4d55466a ro with ordered data mode. Quota mode: disabled.
+VFS: Mounted root (ext4 filesystem) readonly on device 254:0.
+devtmpfs: mounted
+Freeing unused kernel memory: 1152K
+Run /sbin/init as init process
+EXT4-fs (vda): re-mounted 6871b0da-a460-448e-84b3-d8eb4d55466a r/w. Quota mode: disabled.
+Saving 256 bits of creditable seed for next boot
+Starting syslogd: OK
+Starting klogd: OK
+Running sysctl: OK
+Starting network: udhcpc: started, v1.37.0
+udhcpc: broadcasting discover
+udhcpc: broadcasting select for 10.0.2.15, server 10.0.2.2
+udhcpc: lease of 10.0.2.15 obtained from 10.0.2.2, lease time 86400
+deleting routers
+adding dns 10.0.2.3
+OK
+Starting crond: OK
+Starting dropbear sshd: OK
+Load ldd drivers...
+scull: loading out-of-tree module taints kernel.
+scullsingle registered at f800008
+sculluid registered at f800009
+scullwuid registered at f80000a
+scullpriv registered at f80000b
+Load our module, exit on failure
+faulty: unknown parameter 'faulty' ignored
+Get the major number (allocated with allocate_chrdev_region) from /proc/devices
+Remove any existing /dev node for /dev/faulty
+Add a node for our device at /dev/faulty using mknod
+Change group owner to staff
+Change access mode to 664
+Loading local built file aesdchar.ko
+Hello, leekoei
+Starting aesdsocket...
+
+Welcome to Buildroot
+buildroot login: still waiting for qemu to startup... last attempt returned 255 with output 
+ssh: connect to host localhost port 10022: Connection refused
+SSH login successful, waiting 40 additional seconds for process startup
+adding /home/ronli/Documents/coursera-linux-system/assignment-5-leekoei/assignment-autotest/test/assignment9-buildroot/drivertest.sh to the rootfs at /usr/bin
+Validation of driver
+Adding and removing aesdchar driver
+aesdchar               12288  0 
+The output below should show write 1 with first 2 bytes missing
+ite1
+write2
+write3
+write4
+write5
+write6
+write7
+write8
+write9
+write10
+The output below should show the 9 from write 9 followed by write10 only
+9
+write10
+Validation of aesdsocket
+Adding and removing aesdchar driver
+aesdchar               12288  0 
+  169 root     /usr/bin/aesdsocket
+Testing target localhost on port 9000
+Sending ioc seekto command for offset 0,2
+rite1
+swrite2
+swrite3
+swrite4
+swrite5
+swrite6
+swrite7
+swrite8
+swrite9
+swrite10
+Sending ioc seekto command for offset 8,6
+9
+swrite10
+Test passed
+Killing qemu
+~/Documents/coursera-linux-system/assignment-5-leekoei/assignment-autotest/test/assignment9-buildroot
+Test of assignment assignment9-buildroot complete with success
