@@ -22,8 +22,17 @@ The SD card image for the Raspberry PI 4B hardware is generated and located at:
 ```
 buildroot/output/images/sdcard.img
 ```
+The Linux image is uploaded to this repository:
+https://github.com/cu-ecen-aeld/assignment-5-leekoei/blob/main/sdcard.img.tar.gz
+
+
 
 ## 2. Test the Buildroot Linux image on Raspberry Pi 4B
 
-Flash the sdcard.img on an micro SD card.
+Flash the sdcard.img on an micro SD card using the "Raspberry Pi Imager" tool.
 
+The Raspberry Pi 4B is able to boot into the Linux shell in 5 seconds.
+
+Tested the /dev/aesdchar device, and it worked as expected:
+
+![aesdchar-test](https://github.com/cu-ecen-aeld/final-project-leekoei/blob/main/pics/IMG_1696.jpeg)
